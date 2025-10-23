@@ -263,6 +263,7 @@ p {
     align-items: flex-end;
     gap: 40px;
     min-height: 60px;
+    align-items: baseline;
 }
 
 .header-text {
