@@ -1,0 +1,25 @@
+{
+  "name": "modern-website-project",
+  "version": "1.0.0",
+  "description": "A modern, responsive website built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": [
+    "website",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "modern"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  }
+}
