@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add fade-in class to elements and observe them
     const elementsToAnimate = document.querySelectorAll('.project-section, .footer-card, .intro-text, .Main-card-section, .module, .accordion-section');
     elementsToAnimate.forEach(el => {
+        // Skip Eudia section
+        if (el.id === 'eudia-card-section') return;
         el.classList.add('fade-in');
         observer.observe(el);
     });
