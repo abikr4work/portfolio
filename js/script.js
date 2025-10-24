@@ -151,6 +151,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove focus styles when using mouse
         document.body.classList.remove('keyboard-navigation');
     });
+    
+    // Medium feed embedding
+    const mediumArticlesDiv = document.getElementById('medium-articles');
+    if (mediumArticlesDiv) {
+        // Show loading indication
+        mediumArticlesDiv.innerHTML = '<p style="text-align:center; color:#bbb;">Loading articles...</p>';
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abhishek.design')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.items || !Array.isArray(data.items)) throw new Error('No articles found');
+                // Only last 6 posts, filter out non-articles
+                const articles = data.items.filter(item => item.categories && item.categories.length).slice(0,6);
+                if (!articles.length) throw new Error('No articles found');
+                mediumArticlesDiv.innerHTML = articles.map((article, index) => `
+                    <div style="padding: 16px 0; ${index < articles.length - 1 ? 'border-bottom: 1px solid #eee;' : ''} cursor:pointer; transition: all 0.2s ease;" onclick="window.open('${article.link}', '_blank')" onmouseover="this.style.backgroundColor='#f8f9fa'" onmouseout="this.style.backgroundColor='transparent'">
+                        <h4 style="margin:0 0 8px 0; font-size:16px; font-weight:500; color:#333; line-height:1.4;">${article.title}</h4>
+                        <p style="font-size:14px; color:#666; margin:0; line-height:1.5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${article.description.replace(/<[^>]+>/g, '')}</p>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                mediumArticlesDiv.innerHTML = '<p style="text-align:center; color:#b99; font-size:15px;">Could not load articles. <a href="https://medium.com/@abhishek.design" target="_blank" rel="noopener">See all on Medium</a>.</p>';
+            });
+    }
 });
 
 // Notification system
