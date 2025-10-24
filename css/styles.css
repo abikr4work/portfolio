@@ -682,9 +682,9 @@ p {
 }
 
 .footer-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 64px;
 }
 
 .footer-card {
@@ -968,8 +968,9 @@ p {
         box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     }
     .footer-cards {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 64px;
     }
     .header-name {
         font-size: 56px;
@@ -1368,6 +1369,7 @@ p {
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(34, 34, 68, 0.08);
     overflow: hidden;
+    border: 1px solid #eaeaea;
 }
 
 .Main-card-content-article {
