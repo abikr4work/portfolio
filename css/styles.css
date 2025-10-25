@@ -596,6 +596,7 @@ p {
     list-style-type: none;
     margin-left: 0;
     margin-bottom: 16px;
+    list-style-type: disc;
 }
 
 .Main-card-image {
