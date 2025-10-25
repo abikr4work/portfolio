@@ -704,6 +704,18 @@ p {
     margin: 0;
 }
 
+.copyright {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.copyright p {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 400;
+}
+
 .accordion-section {
   width: 100%;
   padding: 40px 0;
