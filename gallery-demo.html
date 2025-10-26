@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Demo - Abhishek Kumar</title>
+    <link rel="stylesheet" href="css/styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+    <!-- Header Bar -->
+    <div class="header-bar">
+        <div class="header-bar-container">
+            <a href="index.html" class="back-button">← Back to Home</a>
+            <h1 class="header-bar-name">Image Gallery Demo</h1>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <section class="introduction">
+        <div class="container">
+            <p class="intro-text">Interactive Image Gallery Module<br>with thumbnail navigation</p>
+        </div>
+    </section>
+
+    <!-- Gallery Demo Section -->
+    <section class="onepanel-section">
+        <div class="container">
+            <div class="onepanel-container">
+                <!-- Gallery Demo 1: Eudia Screenshots -->
+                <div class="onepanel">
+                    <div class="onepanel-content">
+                        <h2 class="onepanel-heading">Eudia M&A Platform</h2>
+                        <p class="onepanel-description">
+                            Explore the different modules of our M&A platform. Click on the thumbnails below to view different screens and features.
+                        </p>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="image-gallery">
+                        <div class="gallery-main-image">
+                            <img src="images/eudia/MnA-connectors.png" alt="Eudia M&A Connectors Interface" />
+                        </div>
+                        <div class="gallery-caption">Connect to data room, manage files with ease to categorize documents for AI analysis</div>
+                        <div class="gallery-thumbnails">
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia/MnA-connectors.png" alt="Connectors" data-caption="Connect to data room, manage files with ease to categorize documents for AI analysis" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia/MnA-riskAnalysis.png" alt="Risk Analysis" data-caption="AI-powered risk analysis across documents with citations and rationale" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia/MnA-dueDiligence.png" alt="Due Diligence" data-caption="Automated due diligence report generation for executives and lawyers" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia/MnA-AskAI.png" alt="Ask AI" data-caption="AI-powered document analysis and Q&A across large document sets" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia/MnA-changelist.png" alt="Change List" data-caption="Track changes and assist in negotiations with highlighted positions" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Demo 2: Product Showcase -->
+                <div class="onepanel">
+                    <div class="onepanel-content">
+                        <h2 class="onepanel-heading">Product Showcase</h2>
+                        <p class="onepanel-description">
+                            Browse through our product portfolio and see how the gallery adapts to different image types and aspect ratios.
+                        </p>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="image-gallery">
+                        <div class="gallery-main-image">
+                            <img src="images/home/eudia-banner.png" alt="Eudia Banner" />
+                        </div>
+                        <div class="gallery-caption">Eudia - AI-powered M&A and contracting platform</div>
+                        <div class="gallery-thumbnails">
+                            <div class="gallery-thumbnail">
+                                <img src="images/home/eudia-banner.png" alt="Eudia Banner" data-caption="Eudia - AI-powered M&A and contracting platform" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/home/Android.png" alt="Android Projects" data-caption="Android development projects and applications" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/home/ChromeOS.png" alt="ChromeOS Projects" data-caption="ChromeOS and web-based application development" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/home/PreviousWork.png" alt="Previous Work" data-caption="Portfolio of previous design and development work" />
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <img src="images/eudia-new.png" alt="Eudia Platform" data-caption="Complete Eudia platform interface overview" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2 style="font-size: 32px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px;">Gallery Features</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px;">
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">🖱️ Click Navigation</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Click on any thumbnail to view the full-size image with smooth transitions</p>
+                </div>
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">⌨️ Keyboard Support</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Use arrow keys to navigate, Enter/Space to select, fully accessible</p>
+                </div>
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">📱 Touch Gestures</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Swipe left/right on mobile devices to navigate between images</p>
+                </div>
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">📐 Responsive Design</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Adapts to all screen sizes with optimized layouts for mobile and desktop</p>
+                </div>
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">✨ Smooth Animations</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Fade transitions, hover effects, and smooth scrolling thumbnails</p>
+                </div>
+                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="color: #3b82f6; margin-bottom: 12px;">💬 Dynamic Captions</h3>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Each image can have its own caption that updates automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Instructions -->
+    <section class="introduction">
+        <div class="container">
+            <h2 style="font-size: 32px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px;">How to Use</h2>
+            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #1a1a1a; margin-bottom: 16px;">HTML Structure</h3>
+                <pre style="background: #f8f9fa; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 14px; color: #333;"><code>&lt;div class="image-gallery"&gt;
+    &lt;div class="gallery-main-image"&gt;
+        &lt;img src="main-image.jpg" alt="Main Image" /&gt;
+    &lt;/div&gt;
+    &lt;div class="gallery-caption"&gt;Default caption&lt;/div&gt;
+    &lt;div class="gallery-thumbnails"&gt;
+        &lt;div class="gallery-thumbnail"&gt;
+            &lt;img src="thumb1.jpg" alt="Image 1" data-caption="Caption 1" /&gt;
+        &lt;/div&gt;
+        &lt;div class="gallery-thumbnail"&gt;
+            &lt;img src="thumb2.jpg" alt="Image 2" data-caption="Caption 2" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                
+                <h3 style="color: #1a1a1a; margin: 24px 0 16px;">Key Features</h3>
+                <ul style="color: #666; line-height: 1.6;">
+                    <li>Add <code>data-caption</code> attribute to thumbnail images for dynamic captions</li>
+                    <li>Use <code>data-fullsize</code> attribute if you want different full-size images</li>
+                    <li>The gallery automatically initializes when the page loads</li>
+                    <li>Fully responsive and accessible out of the box</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cards">
+                <div class="footer-card">
+                    <h3 class="footer-card-title">Gallery Module</h3>
+                    <p class="footer-card-subtitle">Interactive image showcase</p>
+                </div>
+                <div class="footer-card">
+                    <h3 class="footer-card-title">Responsive Design</h3>
+                    <p class="footer-card-subtitle">Works on all devices</p>
+                </div>
+                <div class="footer-card">
+                    <h3 class="footer-card-title">Easy Integration</h3>
+                    <p class="footer-card-subtitle">Simple HTML structure</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

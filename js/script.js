@@ -365,3 +365,112 @@ function addScrollProgress() {
 
 // Initialize scroll progress
 document.addEventListener('DOMContentLoaded', addScrollProgress);
+
+// Image Gallery Functionality
+function initializeImageGallery() {
+    const galleries = document.querySelectorAll('.image-gallery');
+    
+    galleries.forEach(gallery => {
+        const mainImage = gallery.querySelector('.gallery-main-image img');
+        const thumbnails = gallery.querySelectorAll('.gallery-thumbnail');
+        const caption = gallery.querySelector('.gallery-caption');
+        
+        if (!mainImage || thumbnails.length === 0) return;
+        
+        // Set first thumbnail as active by default
+        thumbnails[0].classList.add('active');
+        
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function() {
+                // Remove active class from all thumbnails
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                
+                // Add active class to clicked thumbnail
+                this.classList.add('active');
+                
+                // Get the image data from thumbnail
+                const thumbnailImg = this.querySelector('img');
+                const newSrc = thumbnailImg.dataset.fullsize || thumbnailImg.src;
+                const newAlt = thumbnailImg.alt;
+                const newCaption = thumbnailImg.dataset.caption || '';
+                
+                // Update main image with fade effect
+                mainImage.style.opacity = '0';
+                
+                setTimeout(() => {
+                    mainImage.src = newSrc;
+                    mainImage.alt = newAlt;
+                    
+                    // Update caption if it exists
+                    if (caption) {
+                        caption.textContent = newCaption;
+                    }
+                    
+                    mainImage.style.opacity = '1';
+                }, 150);
+            });
+            
+            // Add keyboard navigation
+            thumbnail.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+                
+                // Arrow key navigation
+                if (e.key === 'ArrowLeft' && index > 0) {
+                    e.preventDefault();
+                    thumbnails[index - 1].focus();
+                    thumbnails[index - 1].click();
+                }
+                
+                if (e.key === 'ArrowRight' && index < thumbnails.length - 1) {
+                    e.preventDefault();
+                    thumbnails[index + 1].focus();
+                    thumbnails[index + 1].click();
+                }
+            });
+            
+            // Make thumbnails focusable
+            thumbnail.setAttribute('tabindex', '0');
+            thumbnail.setAttribute('role', 'button');
+            thumbnail.setAttribute('aria-label', `View image ${index + 1}`);
+        });
+        
+        // Add swipe support for mobile
+        let startX = 0;
+        let currentIndex = 0;
+        
+        gallery.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+        
+        gallery.addEventListener('touchend', function(e) {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            
+            // Minimum swipe distance
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentIndex < thumbnails.length - 1) {
+                    // Swipe left - next image
+                    currentIndex++;
+                    thumbnails[currentIndex].click();
+                } else if (diff < 0 && currentIndex > 0) {
+                    // Swipe right - previous image
+                    currentIndex--;
+                    thumbnails[currentIndex].click();
+                }
+            }
+        }, { passive: true });
+        
+        // Update current index when thumbnail is clicked
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                currentIndex = index;
+            });
+        });
+    });
+}
+
+// Initialize galleries when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeImageGallery);
