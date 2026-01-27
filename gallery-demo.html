@@ -104,6 +104,48 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Gallery Demo 3: Horizontal Peek Gallery -->
+                <div class="onepanel">
+                    <div class="onepanel-content">
+                        <h2 class="onepanel-heading">Horizontal Peek Gallery</h2>
+                        <p class="onepanel-description">
+                            Scroll left to right through cards. A portion of the next card is always visible to suggest more content.
+                        </p>
+                    </div>
+                    
+                    <div class="image-gallery-peek" aria-label="Horizontal peek gallery">
+                        <div class="gallery-peek-track">
+                            <article class="gallery-peek-card">
+                                <div class="gallery-peek-media">
+                                    <img src="images/eudia/MnA.png" alt="Eudia M&A" />
+                                </div>
+                                <div class="gallery-peek-body">
+                                    <p class="gallery-peek-title">M&A</p>
+                                    <p class="gallery-peek-text">Speed up due diligence with AI-powered workflows and document insights.</p>
+                                </div>
+                            </article>
+                            <article class="gallery-peek-card">
+                                <div class="gallery-peek-media">
+                                    <img src="images/eudia/Insight.png" alt="Eudia Insights" />
+                                </div>
+                                <div class="gallery-peek-body">
+                                    <p class="gallery-peek-title">Insights</p>
+                                    <p class="gallery-peek-text">Risk analysis across contracts with citations and rationale.</p>
+                                </div>
+                            </article>
+                            <article class="gallery-peek-card">
+                                <div class="gallery-peek-media">
+                                    <img src="images/eudia/Contracting.png" alt="Eudia Contracting" />
+                                </div>
+                                <div class="gallery-peek-body">
+                                    <p class="gallery-peek-title">Contracting</p>
+                                    <p class="gallery-peek-text">Draft, review, and manage contracts with AI assistance.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -169,6 +211,23 @@
                     <li>The gallery automatically initializes when the page loads</li>
                     <li>Fully responsive and accessible out of the box</li>
                 </ul>
+
+                <h3 style="color: #1a1a1a; margin: 24px 0 16px;">Horizontal Peek Gallery (<code>image-gallery-peek</code>)</h3>
+                <pre style="background: #f8f9fa; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 14px; color: #333;"><code>&lt;div class="image-gallery-peek"&gt;
+    &lt;div class="gallery-peek-track"&gt;
+        &lt;article class="gallery-peek-card"&gt;
+            &lt;div class="gallery-peek-media"&gt;
+                &lt;img src="image1.jpg" alt="Image 1" /&gt;
+            &lt;/div&gt;
+            &lt;div class="gallery-peek-body"&gt;
+                &lt;p class="gallery-peek-title"&gt;Title&lt;/p&gt;
+                &lt;p class="gallery-peek-text"&gt;Description text...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="gallery-peek-card"&gt;...&lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p style="color: #666; margin-top: 12px;">Scrolls left→right and keeps a “peek” of the next card visible at any viewport width. No JavaScript required.</p>
             </div>
         </div>
     </section>
