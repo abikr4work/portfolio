@@ -271,12 +271,7 @@ p {
 }
 
 .header-text-right {
-    flex: 1;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    display: none;
 }
 
 .header-name {
@@ -307,6 +302,17 @@ p {
     text-align: right;
     line-height: 120%;
     letter-spacing: -2%;
+}
+
+.header-summary {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #bbbbbb;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 640px;
 }
 
 .header-image {
@@ -1008,12 +1014,6 @@ p {
     }
     .header-text {
         width: 100%;
-    }
-    .header-text-right {
-        text-align: left;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 20px;
     }
     .header-subtitle {
         text-align: left;
