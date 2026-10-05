@@ -543,7 +543,7 @@ p {
 .Main-card-description {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color: white;
+    color: #bbbbbb;
     margin-bottom: 20px;
     font-weight: 400;
     text-align: left;
@@ -596,7 +596,7 @@ p {
 
 .Main-card-features li {
     background-color: transparent;
-    color: white;
+    color: #bbbbbb;
     padding: 0;
     border-radius: 0;
     font-family: 'Inter', sans-serif;
